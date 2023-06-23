@@ -2,7 +2,7 @@
 import { useState, useEffect, ChangeEvent } from 'react';
 import './App.css';
 import CardList from './components/card-list/card-list.component';
-import SearchBox, { SearchBoxType } from './components/search-box/search-box.component';
+import SearchBox from './components/search-box/search-box.component';
 import { getData } from './utils/data.utils';
 
 export type Monster = {
