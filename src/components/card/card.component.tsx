@@ -1,13 +1,18 @@
 // import { Component } from "react";
 import './card.styles.css';
+import { Monster } from '../../App';
 
-const Card = ({monster: {id, name, email}}) => 
+type CardProps = {
+   monster: Monster;
+};
 
-   (<div key={id} className='card'>
-      <img alt={`monster ${name}`} src={`https://robohash.org/${id}?set=set2&size=300x300`} />
-      <h2>{name}</h2>
-      <p>{email}</p>
-   </div>)
+const Card = ({monster: { id, name, email }}: CardProps) =>
+
+(<div key={id} className='card'>
+   <img alt={`monster ${name}`} src={`https://robohash.org/${id}?set=set2&size=300x300`} />
+   <h2>{name}</h2>
+   <p>{email}</p>
+</div>);
 
 // class Card extends Component {
 //    render() {

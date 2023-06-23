@@ -1,18 +1,24 @@
 // import { Component } from "react";
-import '../card/card.component'
+import '../card/card.component';
 import Card from "../card/card.component";
-import './card-list.styles.css'
+import './card-list.styles.css';
+import { Monster } from '../../App';
 
-const CardList = ({monsters, className}) => 
+type CardListProps = {
+   monsters: Monster[];
+   className: string;
+};
 
-   (<div className={`card-list ${className}`}>
-      {monsters.map((monster) => {
-         return (
-            <Card monster={monster}/>
-         )
-      }
-      )}
-   </div>)
+const CardList = ({ monsters, className }: CardListProps) =>
+
+(<div className={`card-list ${className}`}>
+   {monsters.map((monster) => {
+      return (
+         <Card monster={monster} />
+      );
+   }
+   )}
+</div>);
 
 
 // class CardList extends Component {
